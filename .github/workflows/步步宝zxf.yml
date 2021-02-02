@@ -24,4 +24,4 @@ jobs:
         run: npm install
         
       - name: '运行步步宝zxf脚本'  
-        run: node ./BBB_Task/步步宝zxf.js
+        run: node ./BBB_Task/BBB_Task_zxf.js
