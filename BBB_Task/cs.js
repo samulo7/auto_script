@@ -38,7 +38,7 @@ hostname = bububao.duoshoutuan.com,
 
 
 const $ = new Env('步步寶')
-let notice = $.isNode() ? require('./sendNotify.js') : '';
+const notice = $.isNode() ? require('./sendNotify')
 //let CookieVal = $.getdata('bbb_ck')
 
 let CookieVal = '{"store":"appstore","tokenstr":"F94F4C58BC861262D038330A6525886G1611047627","Connection":"keep-alive","Accept-Encoding":"gzip, deflate, br","version":"10","idfa":"54C0927C-8174-4199-9786-32F69B54A18C","User-Agent":"BBB/132 CFNetwork/1125.2 Darwin/19.4.0","platform":"2","imei":"84E98D7E-CB7B-464C-B4CB-D69CD211D6B1","Cookie":"PHPSESSID=nvi3ft7qone2k93n2t216dbjm4","Host":"bububao.duoshoutuan.com","Accept-Language":"zh-cn","Accept":"*/*","Content-Length":"0"}'
