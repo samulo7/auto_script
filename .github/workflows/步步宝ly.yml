@@ -1,4 +1,4 @@
-name: 步步宝app
+name: 步步宝ly
 
 on:
   workflow_dispatch: # 手动触发
