@@ -6,9 +6,9 @@
 // 每个账号 token 是一个 json，示例如下
 // {"farm_jstoken":"749a90f871adsfads8ffda7bf3b1576760","timestamp":"1610165423873","phoneid":"42c7e3dadfadsfdsaac-18f0e4f4a0cf"}
 let JxncTokens = [
-  '{"smp":"fa8b5c9711118d2e6ff44009125e8b7c","active":"jdnc_1_leshi210108_2","joinnum":2}',//账号一的京喜农场token
-  '{"smp":"f8dac199f769c6d93af050ef42fa8d43","active":"jdnc_1_leshi210108_2","joinnum":1}',//账号二的京喜农场token
-  '{"smp":"b6243fc41c32a85d5de18040e89c3e05","active":"jdnc_1_xiaoxiongbing210121_2","joinnum":1}',//账号二的京喜农场token
+  '{"farm_jstoken":"0e63f205067ffde40f71453122be37f7","timestamp":"1610610154659","phoneid":"6d0e38175d78f00a-35363505653247"}',//账号一的京喜农场token
+  '{"farm_jstoken":"f678e579e278c824328b0df49742694c","timestamp":"1610611176655","phoneid":"6d0e38175d78f00a-35363505653247"}',//账号二的京喜农场token
+  '{"farm_jstoken":"2997fe6ea656b47fbf1e9950f768f6f0","timestamp":"1610610863009","phoneid":"6d0e38175d78f00a-35363505653247"}',//账号二的京喜农场token
 ]
 // 判断github action里面是否有京喜农场 token 
 if (process.env.JXNCTOKENS) {
