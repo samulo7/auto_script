@@ -37,7 +37,7 @@
 const $ = new Env("京喜财富岛提现");
 const JD_API_HOST = "https://m.jingxi.com/";
 const jdCookieNode = $.isNode() ? require("./jdCookie.js") : "";
-$.tokens = [$.getdata('{"smp":"fa8b5c9711118d2e6ff44009125e8b7c","active":"jdnc_1_leshi210108_2","joinnum":2}') || '{}', $.getdata('{"smp":"f8dac199f769c6d93af050ef42fa8d43","active":"jdnc_1_leshi210108_2","joinnum":1}') || '{}'];
+$.tokens = [$.getdata('{"smp":"fa8b5c9711118d2e6ff44009125e8b7c","active":"jdnc_1_leshi210108_2","joinnum":2}') || '{}', $.getdata('{"smp":"f8dac199f769c6d93af050ef42fa8d43","active":"jdnc_1_leshi210108_2","joinnum":1}') || '{}', $.getdata('{"smp":"b6243fc41c32a85d5de18040e89c3e05","active":"jdnc_1_xiaoxiongbing210121_2","joinnum":1}') || '{}'];
 $.result = [];
 $.cookieArr = [];
 $.currentCookie = '';
