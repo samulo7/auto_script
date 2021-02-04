@@ -1,4 +1,4 @@
-name: 步步宝zxf
+name: 步步宝ly2
 
 on:
   workflow_dispatch: # 手动触发
@@ -23,5 +23,5 @@ jobs:
       - name: 安装依赖包
         run: npm install
         
-      - name: '运行步步宝zxf脚本'  
-        run: node ./BBB_Task/BBB_Task_zxf.js
+      - name: '运行步步宝ly2脚本'  
+        run: node ./BBB_Task/BBB_Task_ly2.js
