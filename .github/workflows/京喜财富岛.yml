@@ -25,4 +25,6 @@ jobs:
         
       - name: '运行京喜财富岛脚本'  
         run: node ./JD_Scrip/jx_cfd.js
+        env:
+          JD_COOKIE: ${{ secrets.JD_COOKIE }}  
         
