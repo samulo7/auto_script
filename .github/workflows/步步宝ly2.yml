@@ -26,4 +26,4 @@ jobs:
       - name: '运行步步宝ly2脚本'  
         run: node ./BBB_Task/BBB_Task_ly2.js
         env:
-          BBB_COOKIE_LY: ${{ secrets.BBB_COOKIE_LY2 }}
+          BBB_COOKIE_LY2: ${{ secrets.BBB_COOKIE_LY2 }}
