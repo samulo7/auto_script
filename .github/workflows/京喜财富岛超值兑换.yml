@@ -25,3 +25,6 @@ jobs:
         
       - name: '运行京喜财富岛超值兑换脚本'  
         run: node ./JD_Scrip/jx_cfd_exchange.js
+        env:
+          JD_COOKIE: ${{ secrets.JD_COOKIE }}
+          JXNCTOKENS: ${{ secrets.JXNCTOKENS }}
