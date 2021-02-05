@@ -5,8 +5,8 @@ name: youth_gain(中青浏览赚)
 
 on:
   workflow_dispatch:
-  schedule:
-     - cron: '0 0 * * *'
+  #schedule:
+  #   - cron: '0 0 * * *'
   watch:
     types: youth_gain
 jobs:
