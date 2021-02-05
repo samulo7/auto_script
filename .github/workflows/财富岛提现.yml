@@ -25,3 +25,6 @@ jobs:
         
       - name: '运行财富岛提现脚本'  
         run: node ./JD_Scrip/jx_cfdtx.js
+        env:
+          JD_COOKIE: ${{ secrets.JD_COOKIE }}
+          JXNCTOKENS: ${{ secrets.JXNCTOKENS }}
