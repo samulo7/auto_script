@@ -23,7 +23,7 @@ jobs:
       - name: 安装依赖包
         run: npm install
         
-      - name: '运行步步宝ly2脚本'  
+      - name: '运行步步宝zxf脚本'  
         run: node ./BBB_Task/BBB_Task_zxf.js
         env:
           BBB_COOKIE_ZXF: ${{ secrets.BBB_COOKIE_ZXF }}  
