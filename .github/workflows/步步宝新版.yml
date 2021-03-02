@@ -25,3 +25,8 @@ jobs:
         
       - name: '运行步步宝脚本'  
         run: node ./BBB_Task/bububao.js
+        env:
+          TG_BOT_TOKEN : ${{ secrets.TG_BOT_TOKEN }}
+          TG_USER_ID : ${{ secrets.TG_USER_ID}}
+          BBB_CASH : ${{ secrets.BBB_CASH}}
+          
