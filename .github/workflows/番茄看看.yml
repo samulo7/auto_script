@@ -1,31 +1,40 @@
-name: 番茄看看
+name: fqkk
+
 
 on:
-  workflow_dispatch: # 手动触发
-  schedule: # 计划任务触发
-    - cron: '0,30 0-23 * * *'
-    # cron表达式，时区是UTC时间，比我们早8小时
-    # 建议每个人通过设置 GitHub Environments 的方式来设定为自己的目标运行时间（详细设置方法见文档说明）
+  workflow_dispatch:
+  schedule:
+     - cron: '12 0,2,4,6 * * *'
   watch:
-    types: [started]
+    types: started
 jobs:
   build:
     runs-on: ubuntu-latest
     if: github.event.repository.owner.id == github.event.sender.id
+    env:
+        FQKK_URL: ${{ secrets.FQKK_URL }}
+        FQKK_HD: ${{ secrets.FQKK_HD }}       
+        TZ: Asia/shanghai
     steps:
-      - name: 拉取代码
-        uses: actions/checkout@v2
-      - name: Use Node.js
+      - name: Checkout
+        uses: actions/checkout@v1
+        
+      - name: Use Node.js 12.x
         uses: actions/setup-node@v1
         with:
-            node-version: "12.x"
-      # 安装依赖包
-      - name: 安装依赖包
-        run: npm install
-        
-      - name: '运行番茄看看脚本'  
-        run: node ./fqkk/fqkkk.js
+          node-version: 12.x
+      - name: npm install
+        run: |
+          npm install
+      - name: '运行 【fqkk】'
+        if: env.FQKK_HD
+        run: |
+          node task/fqkk.js
         env:
-          TG_BOT_TOKEN : ${{ secrets.TG_BOT_TOKEN }}
-          TG_USER_ID : ${{ secrets.TG_USER_ID}}
-         
+          PUSH_KEY: ${{ secrets.PUSH_KEY }}
+          BARK_PUSH: ${{ secrets.BARK_PUSH }}
+          TG_BOT_TOKEN: ${{ secrets.TG_BOT_TOKEN }}
+          TG_USER_ID: ${{ secrets.TG_USER_ID }}
+          BARK_SOUND: ${{ secrets.BARK_SOUND }}
+          DD_BOT_TOKEN: ${{ secrets.DD_BOT_TOKEN }}
+          DD_BOT_SECRET: ${{ secrets.DD_BOT_SECRET }}
