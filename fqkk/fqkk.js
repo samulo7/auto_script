@@ -68,7 +68,20 @@ hostname = m.*
 const $ = new Env('番茄看看自动阅读');
 let status;
 status = (status = ($.getval("fqkkstatus") || "1") ) > 1 ? `${status}` : ""; // 账号扩展字符
-const fqkkurlArr = [], fqkkhdArr = [],fqkkbodyArr = [],fqkkcount = ''
+const fqkkurlArr = ['http://m.shoppingyouhui.xyz:80/reada/getTask'], fqkkhdArr = ['{
+  "Proxy-Authorization": "Basic Og==",
+  "Connection": "close",
+  "Accept": "*/*",
+  "X-Requested-With": "XMLHttpRequest",
+  "User-Agent": "Mozilla/5.0 (Linux; Android 7.1.2; google Pixel 2 Build/N2G47O; wv) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/66.0.3359.158 Mobile Safari/537.36 MMWEBID/9726 MicroMessenger/7.0.6.1460(0x27000634) Process/tools NetType/WIFI Language/zh_CN",
+  "Referer": "http",
+  "Accept-Encoding": "gzip, deflate",
+  "Accept-Language": "zh-CN,en-US;q=0.9",
+  "Cookie": "PHPSESSID=r258qkatnfqm7avnmjd1cdogbn; udtauth=d42fsifHndq%2Bq%2BWI0eXBLpY%2FLODw%2F1oebW3OhfQc4CUkT0bPwoMd9LpM9LqMz%2FuWZ4r1hgl85%2BivHua%2FCokB02a887Ge6z0kvzF7Kny4mdxsJhXK%2FgpXZy4lhmmvT5G7j4d%2BEjA12UYxKbpPXY%2F%2FW%2F7DNbDS76WH4p557nJ1ork; Hm_lvt_84099950848427564e5e4b4310ad032e=1614691216; autoRead=1; Hm_lpvt_84099950848427564e5e4b4310ad032e=1614691906",
+  "Host": "m.shoppingyouhui.xyz",
+  "Proxy-Connection": "keep-alive",
+  "Content-type": "application/x-www-form-urlencoded"
+}'],fqkkbodyArr = [],fqkkcount = ''
 let fqkkurl = $.getdata('fqkkurl')
 let fqkkhd = $.getdata('fqkkhd')
 let fqkey = ''
