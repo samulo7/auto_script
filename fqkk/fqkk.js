@@ -68,7 +68,7 @@ hostname = m.*
 const $ = new Env('番茄看看自动阅读');
 let status;
 status = (status = ($.getval("fqkkstatus") || "1") ) > 1 ? `${status}` : ""; // 账号扩展字符
-const fqkkurlArr = ['http://m.shoppingyouhui.xyz:80/reada/getTask'], fqkkhdArr = ['{
+const fqkkurlArr = ['http://m.shoppingyouhui.xyz:80/reada/getTask'], fqkkhdArr = [{
   "Proxy-Authorization": "Basic Og==",
   "Connection": "close",
   "Accept": "*/*",
@@ -81,7 +81,7 @@ const fqkkurlArr = ['http://m.shoppingyouhui.xyz:80/reada/getTask'], fqkkhdArr =
   "Host": "m.shoppingyouhui.xyz",
   "Proxy-Connection": "keep-alive",
   "Content-type": "application/x-www-form-urlencoded"
-}'],fqkkbodyArr = [],fqkkcount = ''
+}],fqkkbodyArr = [],fqkkcount = ''
 let fqkkurl = $.getdata('fqkkurl')
 let fqkkhd = $.getdata('fqkkhd')
 let fqkey = ''
