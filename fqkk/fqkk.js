@@ -73,11 +73,7 @@ let fqkkurl = $.getdata('fqkkurl')
 let fqkkhd = $.getdata('fqkkhd')
 let fqkey = ''
 let fqtx = ($.getval('fqtx') || '100');  // 此处修改提现金额，0.3元等于30，默认为提现一元，也就是100
-
-!(async () => {
-  if (typeof $request !== "undefined") {
-    await fqkkck()
-  if ($.isNode()) {
+if ($.isNode()) {
    if (process.env.FQKK_URL && process.env.FQKK_URL.indexOf('#') > -1) {
    fqkkurlArr = process.env.FQKK_URL.split('#');
    console.log(`您选择的是用"#"隔开\n`)
@@ -97,7 +93,7 @@ let fqtx = ($.getval('fqtx') || '100');  // 此处修改提现金额，0.3元等
    console.log(`您选择的是用换行隔开\n`)
   } else {
    fqkkhdArr = process.env.FQKK_HD.split()
-  };
+  }
 /*  if (process.env.RLBODY && process.env.RLBODY.indexOf('#') > -1) {
    rlbody = process.env.RLBODY.split('#');
    console.log(`您选择的是用"#"隔开\n`)
@@ -127,6 +123,10 @@ let fqtx = ($.getval('fqtx') || '100');  // 此处修改提现金额，0.3元等
 	
     console.log(`============ 脚本执行-国际标准时间(UTC)：${new Date().toLocaleString()}  =============\n`)
     console.log(`============ 脚本执行-北京时间(UTC+8)：${new Date(new Date().getTime() + 8 * 60 * 60 * 1000).toLocaleString()}  =============\n`)
+!(async () => {
+  if (typeof $request !== "undefined") {
+    await fqkkck()
+   
   } else {fqkkurlArr.push($.getdata('fqkkurl'))
     fqkkhdArr.push($.getdata('fqkkhd'))
     let fqkkcount = ($.getval('fqkkcount') || '1');
